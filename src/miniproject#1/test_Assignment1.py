@@ -39,4 +39,4 @@ def test_open_browser():
     button_submit_element = driver.find_element(By.ID, value="btn-login")
     button_submit_element.click()
     time.sleep(5)
-    assert driver.current_url == "https://katalon-demo-cura.herokuapp.com/#appointment"
+    assert driver.current_url =="https://katalon-demo-cura.herokuapp.com/#appointment"
