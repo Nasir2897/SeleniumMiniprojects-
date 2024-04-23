@@ -1,5 +1,5 @@
 import pytest
-import  allure
+import allure
 import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -7,7 +7,7 @@ from allure_commons.types import AttachmentType
 @pytest.mark.smoke
 @allure.title("Verify that login is working in IDrive360 website")
 @allure.description("TC#1 - simple login check on IDrive360 website.")
-def test_open_idrivel_login():
+def test_open_idrive_login():
     driver = webdriver.Chrome()
     driver.get("https://www.idrive360.com/enterprise/login")
     time.sleep(5)
