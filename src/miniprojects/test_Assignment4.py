@@ -50,3 +50,4 @@ def test_open_ebay():
                       attachment_type=AttachmentType.PNG)
 
         time.sleep(5)
+        driver.quit()
