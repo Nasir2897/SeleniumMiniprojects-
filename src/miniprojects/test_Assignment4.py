@@ -35,17 +35,17 @@ def test_open_ebay():
                 print(product_name)
 
         product_price_element_list = driver.find_elements(By.XPATH, "//span[@class='s-item__price']")
-        prize = []
-        for price in product_price_element_list:
-                product_price = price.text
+        prices = []
+        for prices in product_price_element_list:
+                product_price = prices.text
                 print(product_price)
                 x = product_price.replace("$", " ").strip()
-                prize.append(x)
+                prices.append(x)
 
-        prize.sort()
+        prices.sort()
 
         # min_price = prize[1]
-        print(f"cheapest price is {prize[1]}")
+        print(f"cheapest price is {prices[1]}")
         allure.attach(driver.get_screenshot_as_png(), name='cheapest_price_Page_Screenshot',
                       attachment_type=AttachmentType.PNG)
 

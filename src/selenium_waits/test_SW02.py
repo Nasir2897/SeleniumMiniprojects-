@@ -1,3 +1,5 @@
+import time
+
 import allure
 import pytest
 from allure_commons.types import AttachmentType
@@ -38,10 +40,11 @@ def test_vwologin_negative():
     WebDriverWait(driver=driver, timeout=5).until(
         EC.visibility_of_element_located((By.ID, "js-notification-box-msg"))
     )
-    # t = 1
+    # t = 1 if element is visible at 1 second then it will proceed to next command.
 
     error_msg_element = driver.find_element(By.ID, "js-notification-box-msg")
     print(error_msg_element.text)
+    time.sleep(3)
     assert error_msg_element.text == "Your email, password, IP address or location did not match"
 
     allure.attach(driver.get_screenshot_as_png(), name="login-screenshot", attachment_type=AttachmentType.PNG)

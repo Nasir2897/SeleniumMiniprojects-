@@ -28,7 +28,7 @@ def test_vwologin_negative():
     button_submit_element = driver.find_element(By.ID, "js-login-btn")
     button_submit_element.click()
 
-    # Fluent Wait ( EW)
+    # Fluent Wait ( Explicit-Wait)
     ignore_list = [ElementNotVisibleException, ElementNotSelectableException]
 
     wait = WebDriverWait(driver, timeout=60, poll_frequency=1, ignored_exceptions=ignore_list)

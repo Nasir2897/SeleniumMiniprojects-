@@ -1,3 +1,5 @@
+import time
+
 import allure
 import pytest
 from allure_commons.types import AttachmentType
@@ -27,13 +29,14 @@ def test_vwologin_positive():
 
     wait = WebDriverWait(driver=driver, timeout=40)
     wait.until(
-        EC.text_to_be_present_in_element((By.CSS_SELECTOR, "page-heading"), "Dashboard"))
+        EC.text_to_be_present_in_element((By.CSS_SELECTOR, ".page-heading"), "Dashboard"))
     # EC.visibility_of(By.CSS_SELECTOR,".page-heading")
     # EC.presence_of_element_located((By.CSS_SELECTOR, ".page-heading"))
 
 
     heading_element = driver.find_element(By.XPATH, "//span[@data-qa='lufexuloga']");
     assert heading_element.text == "Py2xATB"
+    time.sleep(5)
 
     allure.attach(driver.get_screenshot_as_png(), name="login-screenshot", attachment_type=AttachmentType.PNG)
     driver.quit()

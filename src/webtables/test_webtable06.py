@@ -1,4 +1,4 @@
-example of doubleclick mouse action
+# example of doubleclick mouse action
 # \-backslash is used for continuation
 import time
 from selenium import webdriver

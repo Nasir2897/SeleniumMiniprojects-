@@ -14,15 +14,9 @@ def test_01_actions():
     actions = ActionChains(driver)
     time.sleep(5)
     # Send Keys but with the Shift
-    actions\
-        .key_down(Keys.SHIFT)\
-        .send_keys_to_element(first_name,"the testing academy")\
-        .key_up(Keys.SHIFT).perform()
-    time.sleep(5)
-    actions \
-        .key_down(Keys.SHIFT) \
-        .send_keys_to_element(last_name, "py automation batch") \
-        .key_up(Keys.SHIFT).perform()
+    actions.key_down(Keys.SHIFT).send_keys_to_element(first_name,"the testing academy").key_up(Keys.SHIFT).perform()
+    time.sleep(10)
+    actions.key_down(Keys.SHIFT).send_keys_to_element(last_name, "automation batch").key_up(Keys.SHIFT).perform()
     time.sleep(20)
 
 

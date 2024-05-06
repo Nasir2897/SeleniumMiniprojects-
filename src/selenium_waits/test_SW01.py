@@ -35,7 +35,14 @@ def test_vwologin_negative():
     # Python - Int - It is super bad practice - time.sleep(5) - Worst type of Wait.
     # Webdriver
 
-    time.sleep(5)  # This is Python Int who is waiting, Python Execution Halt.
+    time.sleep(5)  # This is Python Int who is waiting, Python Execution Halt
+    # error_msg_element comes after 5 seconds
+    # I have to wait for some condition
+    # wait with the condition
+    # Add a condition so that webdriver should wait for that condition
+    # until my pageTitle=vwo.com
+    # until ->error->visible->i will not move forward
+    # until my error msg seen on DOM and HTML page i will not read the text
 
     error_msg_element = driver.find_element(By.ID, "js-notification-box-msg")
     print(error_msg_element.text)
